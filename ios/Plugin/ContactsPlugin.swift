@@ -220,7 +220,7 @@ public class ContactsPlugin: CAPPlugin, CNContactPickerDelegate {
         }
 
         // Check if this is a limited access request or regular pick contact
-        let callMethod = call.method ?? ""
+        let callMethod = call.methodName ?? ""
         
         if callMethod == "requestLimitedContactsAccess" {
             // For limited access, return full contact data in an array (even for single selection)
@@ -295,7 +295,7 @@ public class ContactsPlugin: CAPPlugin, CNContactPickerDelegate {
         }
 
         // Check if this is a limited access request or regular pick contact
-        let callMethod = call.method ?? ""
+        let callMethod = call.methodName ?? ""
         
         if callMethod == "requestLimitedContactsAccess" {
             // For limited access, return empty array (not an error)
